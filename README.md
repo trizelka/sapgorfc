@@ -117,4 +117,4 @@ Docker Image Howto [here](https://devopscube.com/build-docker-image/)
 SAP with SNC [here](https://help.sap.com/docs/SAP_NETWEAVER_750/e73bba71770e4c0ca5fb2a3c17e8e229/2870ca68118047389852ec53f075f76d.html?version=7.5.21&locale=en-US)
 
 ## Credits
-if you have any question, please don't hesitate to contact me at   <a href="mailto:trizelka@gmail.com?"><img src="https://img.shields.io/badge/gmail-%23DD0031.svg?&style=for-the-badge&logo=gmail&logoColor=white"/>    or   [LinkedIn](https://id.linkedin.com/in/trisia-juniarto-5abba0a2)
+if you have any question, please don't hesitate to contact me <a href="mailto:trizelka@gmail.com?"><img src="https://img.shields.io/badge/gmail-%23DD0031.svg?&style=for-the-badge&logo=gmail&logoColor=white"/> ||  [LinkedIn](https://id.linkedin.com/in/trisia-juniarto-5abba0a2)
