@@ -22,8 +22,7 @@ This Platform can be implemented for Microservices architecture by adding new se
 
 ## Install SAPGORFC
 ### Download or Clone via git
-Download from github: https://github.com/trizelka/sapgorfc.git or
-git clone https://github.com/trizelka/sapgorfc.git
+Download or Clone from [github](https://github.com/trizelka/sapgorfc.git)
 
 ### Run Docker-Compose
 Install docker-compose package
