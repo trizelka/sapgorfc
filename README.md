@@ -34,7 +34,7 @@ docker-compose up
 
 ## Getting Started
 ### Credential and Access to SAP NW RFC
-Add/Edit Parameters SAP Access in config.json
+Edit Parameters SAP Access in config.json
 
 ```bash
     destination: IXX
@@ -47,7 +47,7 @@ Add/Edit Parameters SAP Access in config.json
     saprouter: /H/111.22.333.22/S/2222/W/xxxxx/H/222.22.222.222/H/
 ```
 
-Add/Edit Allow RFC Name in config.json
+Edit Allow RFC Name in config.json
 
 ```bash
 "rfc": [
@@ -104,18 +104,23 @@ CALL FUNCTION 'RFC_READ_TABLE' destination 'destination'
 
 ## To Do
 * Improve the documentation
-* Keycloak Credential
+* Integration to SSO Credential with Keycloak
+* Advance Security with SAP Secure Network Communication (SNC)
 
 ## References
 The SAP NW Download is [here](https://launchpad.support.sap.com/#/softwarecenter/template/products/%20_APP=00200682500000001943&_EVENT=DISPHIER&HEADER=Y&FUNCTIONBAR=N&EVENT=TREE&NE=NAVIGATE&ENR=01200314690200010197&V=MAINT&TA=ACTUAL&PAGE=SEARCH), but the SAP page is the worst, maybe it's better to search for a torrent or ask a friend at SAP.
 
 If you are SAP employee please check SAP OSS note [1037575 - Software download authorizations for SAP employees](http://service.sap.com/sap/support/notes/1037575).
 
-Docker Image Howto https://devopscube.com/build-docker-image/
+Docker Image Howto [here]https://devopscube.com/build-docker-image/
+
+SAP with SNC [here]https://help.sap.com/docs/SAP_NETWEAVER_750/e73bba71770e4c0ca5fb2a3c17e8e229/2870ca68118047389852ec53f075f76d.html?version=7.5.21&locale=en-US
 
 ## Credits
-if you have any question, please don't hesitate contact me at:
+if you have any question, please don't hesitate to contact me at:
 
-trizelka@gmail.com or 
+trizelka@gmail.com
+
+or
 
 https://id.linkedin.com/in/trisia-juniarto-5abba0a2
