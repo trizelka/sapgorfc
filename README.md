@@ -9,6 +9,7 @@
 The **sapgorfc** package provides bindings for **SAP NW RFC Library**, for an easy way of interacting with SAP systems
 
 The goal of this project is to make deployment easier using Docker
+
 Using JSON format for HTTP request and response
 
 ## Platforms and Prerequisites
@@ -34,6 +35,8 @@ docker-compose up
 ## Getting Started
 ### Credential and Access to SAP NW RFC
 Add/Edit Parameters SAP Access in config.json
+
+```bash
     destination: IXX
     client: 800
     user: demo
@@ -42,17 +45,25 @@ Add/Edit Parameters SAP Access in config.json
     ashost: 11.111.11.111
     sysnr: 00
     saprouter: /H/111.22.333.22/S/2222/W/xxxxx/H/222.22.222.222/H/
+```
 
 Add/Edit Allow RFC Name in config.json
+
+```bash
 "rfc": [
 		{"name": "STFC_STRUCTURE"},
 		{"name": "RFC_READ_TABLE"}
     ],
+```
 
 ### Sample request
 url: http://localhost:9090/call
+
 method: POST
+
 Body:
+
+```bash
 {
 	"fcname":"RFC_READ_TABLE",
 	"params":{
@@ -63,9 +74,11 @@ Body:
 		"ROWCOUNT":0
 	}
 }
+```
 
 SAP ABAP Code:
 
+```bash
 DATA T_DATA TYPE STANDARD TABLE OF TAB512.
 
 CALL FUNCTION 'RFC_READ_TABLE' destination 'destination'
@@ -87,6 +100,7 @@ CALL FUNCTION 'RFC_READ_TABLE' destination 'destination'
      NOT_AUTHORIZED = 5
      DATA_BUFFER_EXCEEDED = 6
     OTHERS = 7.
+```
 
 ## To Do
 * Improve the documentation
@@ -100,4 +114,8 @@ If you are SAP employee please check SAP OSS note [1037575 - Software download a
 Docker Image Howto https://devopscube.com/build-docker-image/
 
 ## Credits
-if you have any question, please don't hesitate contact me at: trizelka@gmail.com or https://id.linkedin.com/in/trisia-juniarto-5abba0a2
+if you have any question, please don't hesitate contact me at:
+
+trizelka@gmail.com or 
+
+https://id.linkedin.com/in/trisia-juniarto-5abba0a2
