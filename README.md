@@ -64,6 +64,30 @@ Body:
 	}
 }
 
+SAP ABAP Code:
+
+DATA T_DATA TYPE STANDARD TABLE OF TAB512.
+
+CALL FUNCTION 'RFC_READ_TABLE' destination 'destination'
+  EXPORTING
+     QUERY_TABLE = 'KNB5'
+*   DELIMITER                  = ' '
+*   NO_DATA                    = ' '
+*   ROWSKIPS                   = 0
+*   ROWCOUNT                   = 0
+  TABLES
+*     OPTIONS = ???
+*     FIELDS = ???
+     DATA = T_DATA
+  EXCEPTIONS
+     TABLE_NOT_AVAILABLE = 1
+     TABLE_WITHOUT_DATA = 2
+     OPTION_NOT_VALID = 3
+     FIELD_NOT_VALID = 4
+     NOT_AUTHORIZED = 5
+     DATA_BUFFER_EXCEEDED = 6
+    OTHERS = 7.
+
 ## To Do
 * Improve the documentation
 * Keycloak Credential
