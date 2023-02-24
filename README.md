@@ -76,7 +76,7 @@ Body:
 }
 ```
 
-SAP ABAP Code:
+SAP ABAP Sample Code:
 
 ```bash
 DATA T_DATA TYPE STANDARD TABLE OF TAB512.
@@ -112,15 +112,9 @@ The SAP NW Download is [here](https://launchpad.support.sap.com/#/softwarecenter
 
 If you are SAP employee please check SAP OSS note [1037575 - Software download authorizations for SAP employees](http://service.sap.com/sap/support/notes/1037575).
 
-Docker Image Howto [here]https://devopscube.com/build-docker-image/
+Docker Image Howto [here](https://devopscube.com/build-docker-image/)
 
-SAP with SNC [here]https://help.sap.com/docs/SAP_NETWEAVER_750/e73bba71770e4c0ca5fb2a3c17e8e229/2870ca68118047389852ec53f075f76d.html?version=7.5.21&locale=en-US
+SAP with SNC [here](https://help.sap.com/docs/SAP_NETWEAVER_750/e73bba71770e4c0ca5fb2a3c17e8e229/2870ca68118047389852ec53f075f76d.html?version=7.5.21&locale=en-US)
 
 ## Credits
-if you have any question, please don't hesitate to contact me at:
-
-trizelka@gmail.com
-
-or
-
-https://id.linkedin.com/in/trisia-juniarto-5abba0a2
+if you have any question, please don't hesitate to contact me at [email](trizelka@gmail.com),[LinkedIn](https://id.linkedin.com/in/trisia-juniarto-5abba0a2)
