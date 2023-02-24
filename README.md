@@ -8,9 +8,11 @@
 
 The **sapgorfc** package provides bindings for **SAP NW RFC Library**, for an easy way of interacting with SAP systems
 
-The goal of this project is to make deployment easier using Docker
+Platform Linux only
 
-Using JSON format for HTTP request and response
+The goal of this project is to make deployment easier with Docker
+
+HTTP request and response with JSON format
 
 ## Platforms and Prerequisites
 
@@ -26,6 +28,13 @@ Download or Clone from [github](https://github.com/trizelka/sapgorfc.git)
 
 ### Run Docker-Compose
 Install docker-compose package
+
+```bash
+apt-get update
+apt-get -y install docker-compose
+```
+
+Run
 
 ```bash
 docker-compose up
