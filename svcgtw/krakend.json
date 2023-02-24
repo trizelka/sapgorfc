@@ -1,0 +1,67 @@
+{
+    "version": 3,
+    "name": "svcgtw",
+    "port": 9090,
+    "timeout": "50s",
+    "read_timeout": "10s",
+    "write_timeout": "30s",
+    "cache_ttl": "3600ms",
+    "extra_config": {
+        "github_com/devopsfaith/krakend-cors": {
+            "allow_origins": ["*", "http://localhost:3100"],
+            "allow_methods": ["PUT", "PATCH", "POST", "GET", "DELETE", "OPTIONS"],
+            "allow_headers": ["Accept-Encoding",
+                "Accept-Language",
+                "access-control-allow-origin",
+                "Access-Control-Request-Headers",
+                "Access-Control-Request-Method",
+                "Authorization",
+                "Cache-Control",
+                "Connection",
+                "Content-Type",
+                "Host",
+                "If-Modified-Since",
+                "Keep-Alive",
+                "Key",
+                "Origin",
+                "Pragma",
+                "User-Agent",
+                "X-Custom-Header"
+            ],
+            "max_age": "48h",
+            "allow_credentials": true,
+            "expose_headers": ["Content-Length", "Content-Type"]
+        },
+        "github_com/devopsfaith/krakend-gologging": {
+            "level": "ERROR",
+            "prefix": "[KRAKEND]",
+            "stdout": false,
+            "format": "default"
+        },
+        "github_com/letgoapp/krakend-influx":{
+            "address":"http://influxdb.monitoring.svc.cluster.local:8086",
+            "ttl":"25s",
+            "buffer_size":0
+        },
+        "github_com/devopsfaith/krakend-metrics": {
+            "collection_time": "30s",
+            "listen_address": "127.0.0.1:8090"
+        }
+    },
+    "endpoints": [
+        {
+            "endpoint" : "/sap/call",
+            "output_encoding": "no-op",
+            "timeout": "50s",
+            "method": "POST",
+            "headers_to_pass": ["Authorization", "api-key", "Content-Type","Content-Length", "User-Agent"],
+            "backend": [{
+                "encoding": "no-op",
+                "host": [
+                    "svc-call:80"
+                ],
+                "url_pattern": "/call"
+            }]
+        }
+    ]
+}

@@ -1,0 +1,20 @@
+{
+    "title":"SAPGORFC",
+    "host": "localhost",
+    "port": "80",
+    "sapconn": {
+    	"destination": "I64",
+    	"client": "800",
+    	"user": "demo",
+    	"password": "welcome",
+    	"language": "EN",
+    	"ashost": "11.111.11.111",
+    	"sysnr":"00",
+    	"saprouter":"/H/222.22.222.22/S/2222/W/xxxxx/H/222.22.222.222/H/"
+    },
+    "rfc": [
+		{"name": "STFC_STRUCTURE"},
+		{"name": "RFC_READ_TABLE"}
+    ],
+    "max_number": 10
+}

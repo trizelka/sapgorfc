@@ -1,1 +1,79 @@
-# sapgorfc
+# SAP NW RFC HTTP Connector 
+
+**Written in Golang**
+
+**this is only a fork, but it seems that [origin](https://github.com/SAP/gorfc) is very *static***  
+
+**all credit for gorfc goes to [@bsrdjan](https://github.com/bsrdjan)**  
+
+The **sapgorfc** package provides bindings for **SAP NW RFC Library**, for an easy way of interacting with SAP systems
+
+The goal of this project is to make deployment easier using Docker
+Using JSON format for HTTP request and response
+
+## Platforms and Prerequisites
+
+The SAP NW RFC Library is a prerequsite for using the GO RFC connector and must be installed on a same system. It is available on platforms supported by GO, except OSX.
+
+Docker, you can much easier to deploy together with library SDK SAP NW RFC
+
+This Platform can be implemented for Microservices architecture by adding new services more easily
+
+## Install SAPGORFC
+### Download or Clone via git
+Download from github: https://github.com/trizelka/sapgorfc.git or
+git clone https://github.com/trizelka/sapgorfc.git
+
+### Run Docker-Compose
+Install docker-compose package
+
+```bash
+docker-compose up
+```
+
+## Getting Started
+### Credential and Access to SAP NW RFC
+Add/Edit Parameters SAP Access in config.json
+    destination: IXX
+    client: 800
+    user: demo
+    password: password
+    language: EN
+    ashost: 11.111.11.111
+    sysnr: 00
+    saprouter: /H/111.22.333.22/S/2222/W/xxxxx/H/222.22.222.222/H/
+
+Add/Edit Allow RFC Name in config.json
+"rfc": [
+		{"name": "STFC_STRUCTURE"},
+		{"name": "RFC_READ_TABLE"}
+    ],
+
+### Sample request
+url: http://localhost:9090/call
+method: POST
+Body:
+{
+	"fcname":"RFC_READ_TABLE",
+	"params":{
+		"QUERY_TABLE":"USR01",
+		"DELIMITER":";",
+		"NO_DATA":"",
+		"ROWSKIPS":0,
+		"ROWCOUNT":0
+	}
+}
+
+## To Do
+* Improve the documentation
+* Keycloak Credential
+
+## References
+The SAP NW Download is [here](https://launchpad.support.sap.com/#/softwarecenter/template/products/%20_APP=00200682500000001943&_EVENT=DISPHIER&HEADER=Y&FUNCTIONBAR=N&EVENT=TREE&NE=NAVIGATE&ENR=01200314690200010197&V=MAINT&TA=ACTUAL&PAGE=SEARCH), but the SAP page is the worst, maybe it's better to search for a torrent or ask a friend at SAP.
+
+If you are SAP employee please check SAP OSS note [1037575 - Software download authorizations for SAP employees](http://service.sap.com/sap/support/notes/1037575).
+
+Docker Image Howto https://devopscube.com/build-docker-image/
+
+## Credits
+if you have any question, please don't hesitate contact me at: trizelka@gmail.com or https://id.linkedin.com/in/trisia-juniarto-5abba0a2
